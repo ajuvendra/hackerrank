@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class PDFViewer {
 	static int designerPdfViewer(int[] h, String word) {
-		return 0;
+		String chars = "abcdefghijklmnopqrstuvwxyz";
+		int max = 0;
+		for(int i = 0; i < word.length(); i++) {
+			int temp = h[chars.indexOf(word.charAt(i))];
+			if(temp > max) max = temp; 
+		}
+		return word.length() * 1 * max;
 	}
 
 	public static void main(String[] args) {
